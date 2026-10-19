@@ -114,8 +114,8 @@ Shoulder frame 정의, 카메라 좌표 변환, 6개 관절각 계산 수식과 
 
 | 이름 | 역할 |
 |------|------|
-| **오희민** | Vision,LLM |
-| **이준수** | Planning |
+| **오희민** | Vision, LLM |
+| **이준수** | Planning, IK |
 | **한찬우** | GUI, Hardware |
 
 ---
