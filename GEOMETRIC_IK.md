@@ -91,13 +91,13 @@ PDF의 DH parameter는 다음과 같다. 두 번째 열은 DH 변환에 넣는 �
 팔꿈치 좌표를 $P_e=(x_e,y_e,z_e)$라 하면, PDF의 식은 다음과 같다.
 
 $$
-\theta_1=\operatorname{atan}\left(\frac{-y_e}{z_e}\right)
+\theta_1=\arctan\left(\frac{-y_e}{z_e}\right)
 $$
 
 ### Joint 2
 
 $$
-\theta_2=\operatorname{atan}\left(\frac{x_e}{\sqrt{y_e^2+z_e^2}}\right)
+\theta_2=\arctan\left(\frac{x_e}{\sqrt{y_e^2+z_e^2}}\right)
 $$
 
 ### Joint 3: 상완 회전
@@ -122,7 +122,7 @@ $\mathbf n_T$와 $\mathbf o_T$를 각각 $R_{noa}$의 첫 번째·두 번째 열
 
 $$
 def_3=\mathbf v_e\cdot\mathbf o_T,\qquad
-|\theta_3|=\operatorname{acos}(\mathbf v_e\cdot\mathbf n_T)
+|\theta_3|=\arccos(\mathbf v_e\cdot\mathbf n_T)
 $$
 
 PDF는 $def_3>0$을 상완 외회전, $def_3<0$을 내회전으로 설명한다. 부호를 포함한 관절각을 구현할 때는 이 판별값에 따라 $|\theta_3|$에 양·음의 부호를 적용한다. PDF에 적힌 `acos` 식 자체는 각도의 크기만 반환한다.
@@ -130,7 +130,7 @@ PDF는 $def_3>0$을 상완 외회전, $def_3<0$을 내회전으로 설명한다.
 ### Joint 4: 팔꿈치 굽힘
 
 $$
-\theta_4=\operatorname{acos}(\mathbf v_u\cdot\mathbf v_f)
+\theta_4=\arccos(\mathbf v_u\cdot\mathbf v_f)
 $$
 
 상완과 전완이 같은 방향으로 펴져 있으면 0이며, 굽힐수록 커진다.
@@ -157,7 +157,7 @@ $$
 ### Joint 6
 
 $$
-\theta_6=\operatorname{acos}(\mathbf v_f\cdot\mathbf v_w)-\frac{\pi}{2}
+\theta_6=\arccos(\mathbf v_f\cdot\mathbf v_w)-\frac{\pi}{2}
 $$
 
 전완 방향과 손바닥 법선이 직교하면 $\theta_6=0$이다.
@@ -181,7 +181,7 @@ $$
 
 $$
 def_5=(\mathbf v_e\times\mathbf v_{recov})\cdot\mathbf v_f,\qquad
-|\theta_5|=\operatorname{acos}(\mathbf v_{recov}\cdot\mathbf v_e)
+|\theta_5|=\arccos(\mathbf v_{recov}\cdot\mathbf v_e)
 $$
 
 PDF는 $def_5>0$을 손목 외회전, $def_5<0$을 내회전으로 설명한다. Joint 3과 마찬가지로 `acos`는 크기만 계산하므로, 부호 있는 각도가 필요하면 회전 방향 판별값을 함께 사용한다.
