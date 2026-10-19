@@ -74,6 +74,10 @@ source install/setup.bash
 
 ## How to
 
+### Geometric IK
+
+Shoulder frame 정의, 카메라 좌표 변환, 6개 관절각 계산 수식과 원본 그림은 [Geometric IK 문서](GEOMETRIC_IK.md)를 참고하세요.
+
 ### Pipeline
 
 1. **D435I Connect**
